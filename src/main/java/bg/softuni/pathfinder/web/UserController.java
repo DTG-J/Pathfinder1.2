@@ -55,4 +55,9 @@ private final UserService userService;
 
         return "login";
     }
+    @PostMapping("/login")
+    public String login(UserLoginDTO loginData) {
+
+        return "login";
+    }
 }
