@@ -10,6 +10,7 @@ import jakarta.validation.constraints.Size;
 
 public class UserRegisterDTO {
     @NotBlank
+    @Size(min = 2)
     private String username;
 
     @NotEmpty
