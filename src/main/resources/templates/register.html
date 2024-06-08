@@ -55,7 +55,8 @@
                     </div>
                     <div class="col-auto">
                         <input name="fullName"
-                               required minlength="5" maxlength="20"
+                               th:field="*{fullName}"
+                               th:errorclass="is-invalid"
                                type="text"
                                id="inputFullName"
                                class="form-control"
@@ -71,7 +72,8 @@
                     </div>
                     <div class="col-auto">
                         <input name="email"
-								required
+                               th:field="*{email}"
+                               th:errorclass="is-invalid"
                                type="email"
                                id="inputEmail"
                                class="form-control"
@@ -85,7 +87,9 @@
                         <label for="inputAge" class="col-form-label ">Age</label>
                     </div>
                     <div class="col-auto">
-                        <input name="age" required
+                        <input name="age"
+                               th:field="*{age}"
+                               th:errorclass="is-invalid"
                                type="number"
                                id="inputAge"
                                class="form-control"
@@ -101,7 +105,8 @@
                     </div>
                     <div class="col-auto">
                         <input name="password"
-                                required minlength="5" maxlength="20"
+                               th:field="*{password}"
+                               th:errorclass="is-invalid"
                                type="password"
                                id="inputPassword"
                                class="form-control"
@@ -119,7 +124,8 @@
                     </div>
                     <div class="col-auto">
                         <input name="confirmPassword"
-                                required minlength="5" maxlength="20"
+                               th:field="*{confirmPassword}"
+                               th:errorclass="is-invalid"
                                type="password"
                                id="inputConfirmPassword"
                                class="form-control"

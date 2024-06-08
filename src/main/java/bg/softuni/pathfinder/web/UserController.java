@@ -32,9 +32,10 @@ public class UserController {
 
         if (bindingResult.hasErrors()) {
             redirectAttributes.addFlashAttribute("registerData", data);
+            redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.UserRegisterDTO", bindingResult);
 
             // handle errors
-            return "register";
+            return "redirect:/users/register";
         }
 
         // register user
