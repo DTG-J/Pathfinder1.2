@@ -1,5 +1,6 @@
 package bg.softuni.pathfinder.web;
 
+import bg.softuni.pathfinder.model.Level;
 import bg.softuni.pathfinder.web.dto.UserRegisterDTO;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
@@ -19,6 +20,7 @@ public class UserController {
     @GetMapping("/register")
     public String viewRegister(Model model) {
         model.addAttribute("registerData", new UserRegisterDTO());
+        model.addAttribute("levels", Level.values ());
 
         return "register";
     }

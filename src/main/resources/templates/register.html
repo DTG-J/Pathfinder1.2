@@ -105,11 +105,11 @@
                     </div>
                     <div class="col-auto">
                         <select name="level"
-                               th:field="*{levels}"
+                               th:field="*{level}"
                                type=""
                                id="selectLevel"
                                class="form-control">
-                            <option th:each= "levelOption: ${levels}" th:value="${levelOption}">  </option>
+                            <option th:each= "levelOption: ${levels}" th:value="${levelOption}" th:text="${levelOption}">  </option>
                         </select>
                     </div>
                 </div>

@@ -32,15 +32,17 @@ public class UserRegisterDTO {
 
     private String confirmPassword;
 
-    public List<Level> getLevels() {
-        return levels;
+
+
+    private Level level;
+
+    public Level getLevel() {
+        return level;
     }
 
-    public void setLevels(List<Level> levels) {
-        this.levels = levels;
+    public void setLevel(Level level) {
+        this.level = level;
     }
-
-    private List<Level> levels;
 
     public UserRegisterDTO() {
 
