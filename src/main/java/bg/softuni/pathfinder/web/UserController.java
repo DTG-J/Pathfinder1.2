@@ -60,7 +60,7 @@ private final UserService userService;
     }
     @PostMapping("/login")
     public String login(UserLoginDTO loginData) {
-
-        return "login";
+        userService.login(loginData);
+        return "redirect:/";
     }
 }

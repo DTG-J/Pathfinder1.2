@@ -2,6 +2,7 @@ package bg.softuni.pathfinder.service;
 
 import bg.softuni.pathfinder.data.UserRepository;
 import bg.softuni.pathfinder.model.User;
+import bg.softuni.pathfinder.web.UserLoginDTO;
 import bg.softuni.pathfinder.web.dto.UserRegisterDTO;
 import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -23,5 +24,8 @@ public class UserService {
         User user = this.modelMapper.map (userRegisterDTO, User.class);
         user.setPassword (passwordEncoder.encode (userRegisterDTO.getPassword ()));
         userRepository.save (user);
+    }
+
+    public void login(UserLoginDTO loginData) {
     }
 }
