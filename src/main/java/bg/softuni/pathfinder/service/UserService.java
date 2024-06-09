@@ -27,5 +27,12 @@ public class UserService {
     }
 
     public void login(UserLoginDTO loginData) {
+        User user = userRepository.findByUsername(loginData.getUsername ());
+        if (user == null){
+            //TODO throw error
+        }
+        if (passwordEncoder.matches (loginData.getPassword (), user.getPassword ())){
+
+        }
     }
 }
