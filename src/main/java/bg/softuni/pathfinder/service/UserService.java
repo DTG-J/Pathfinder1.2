@@ -31,11 +31,14 @@ public class UserService {
     public void login(UserLoginDTO loginData) {
         User user = userRepository.findByUsername(loginData.getUsername ());
         if (user == null){
-            return;
+            throw new RuntimeException ("Username not found");
             //TODO throw error
+
+
         }
         if (passwordEncoder.matches (loginData.getPassword (), user.getPassword ()) && !currentUser.isLoggedIn ()){
         currentUser.setUser (user);
+        throw new RuntimeException ("Password not valid");
         }
     }
 }
