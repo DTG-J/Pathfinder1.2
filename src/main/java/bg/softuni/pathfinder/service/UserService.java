@@ -38,7 +38,7 @@ public class UserService {
         }
         if (passwordEncoder.matches (loginData.getPassword (), user.getPassword ()) && !currentUser.isLoggedIn ()){
         currentUser.setUser (user);
-        throw new RuntimeException ("Password not valid");
+
         }
     }
 }
