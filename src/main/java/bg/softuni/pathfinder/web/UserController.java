@@ -51,9 +51,12 @@ private final UserService userService;
     }
 
     @GetMapping("/login")
-    public String viewLogin() {
+    public ModelAndView viewLogin() {
 
-        return "login";
+        ModelAndView modelAndView = new ModelAndView ("login");
+        modelAndView.addObject ("loginData", new UserLoginDTO ());
+
+        return modelAndView;
     }
     @PostMapping("/login")
     public String login(UserLoginDTO loginData) {

@@ -33,6 +33,7 @@
                     </div>
                     <div class="col-auto">
                         <input type="text"
+                               th:field="*{username}"
                                name="username"
                                required minlength="4" maxlength="20"
                                id="inputUsername"
@@ -46,6 +47,7 @@
                     </div>
                     <div class="col-auto">
                         <input type="password"
+                               th:field="*{password}"
                                name="password"
                                required minlength="4" maxlength="20"
                                id="inputPassword" class="form-control"
