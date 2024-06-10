@@ -63,4 +63,9 @@ private final UserService userService;
         userService.login(loginData);
         return "redirect:/";
     }
+    @PostMapping("/logout")
+    public String logout() {
+        userService.logout();
+        return "redirect:/";
+    }
 }

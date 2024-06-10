@@ -41,4 +41,8 @@ public class UserService {
 
         }
     }
+
+    public void logout() {
+        currentUser.setUser (null);
+    }
 }
