@@ -3,7 +3,7 @@
         <ul>
             <th:block th:unless="${@currentUser.isLoggedIn()}">
                 <li >
-                    <a href="/">Home</a>
+                    <a th:href="@{/}">Home</a>
                 </li>
                 <li>
                     <a th:href="@{users/login}">Login</a>
@@ -12,7 +12,7 @@
                     <a th:href="@{users/register}">Register</a>
                 </li>
                 <li>
-                    <a href="/">About</a>
+                    <a th:href= "@{users/about}">About</a>
                 </li>
             </th:block>
             <th:block th:if="${@currentUser.isLoggedIn()}">
