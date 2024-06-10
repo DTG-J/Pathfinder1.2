@@ -21,8 +21,8 @@ public class HomeController {
 
         return "index";
     }
-    @GetMapping("/about ")
-    public ModelAndView index() {
+    @GetMapping("/about")
+    public ModelAndView index(){
        return new ModelAndView ("about");
     }
 }
