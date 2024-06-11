@@ -70,6 +70,8 @@ private final UserService userService;
     }
     @GetMapping("users/profile")
     public ModelAndView profile(){
-        return new ModelAndView ("profile");
+        ModelAndView modelAndView = new ModelAndView ("profile");
+        modelAndView.addObject ("profileData", userService.getProfileData ());
+        return modelAndView;
     }
 }
