@@ -2,6 +2,7 @@ package bg.softuni.pathfinder.service;
 
 import bg.softuni.pathfinder.data.UserRepository;
 import bg.softuni.pathfinder.model.User;
+import bg.softuni.pathfinder.service.dto.UserProfileDto;
 import bg.softuni.pathfinder.web.UserLoginDTO;
 import bg.softuni.pathfinder.web.dto.UserRegisterDTO;
 import org.modelmapper.ModelMapper;
@@ -44,5 +45,8 @@ public class UserService {
 
     public void logout() {
         currentUser.setUser (null);
+    }
+    public UserProfileDto getProfileData(){
+        return modelMapper.map (currentUser.getUser (), UserProfileDto.class);
     }
 }
