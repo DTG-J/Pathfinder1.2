@@ -68,4 +68,8 @@ private final UserService userService;
         userService.logout();
         return "redirect:/";
     }
+    @GetMapping("users/profile")
+    public ModelAndView profile(){
+        return new ModelAndView ("profile");
+    }
 }
