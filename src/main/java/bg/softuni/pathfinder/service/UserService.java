@@ -47,6 +47,6 @@ public class UserService {
         currentUser.setUser (null);
     }
     public UserProfileDto getProfileData(){
-        return modelMapper.map (currentUser.getUser (), UserProfileDto.class);
+        return modelMapper.map (currentUser.getUser(), UserProfileDto.class);
     }
 }
