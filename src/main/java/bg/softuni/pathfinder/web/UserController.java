@@ -69,7 +69,7 @@ private final UserService userService;
         return "redirect:/";
     }
     @GetMapping("users/profile")
-    public ModelAndView profile(){
+    public ModelAndView profile() {
         ModelAndView modelAndView = new ModelAndView ("profile");
         modelAndView.addObject ("profileData", userService.getProfileData());
         return modelAndView;

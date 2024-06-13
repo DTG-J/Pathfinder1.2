@@ -46,7 +46,7 @@ public class UserService {
     public void logout() {
         currentUser.setUser (null);
     }
-    public UserProfileDto getProfileData(){
+    public UserProfileDto getProfileData() {
         return modelMapper.map (currentUser.getUser(), UserProfileDto.class);
     }
 }
